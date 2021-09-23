@@ -26,4 +26,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run a echo example
-        run: echo "The dummy was triggered ? Result = ${{ steps.check.outputs.triggered }}"
+        run: echo "The dummy was triggered ? Result = ${{ needs.deploy-check.outputs.triggered }}"
